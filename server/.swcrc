@@ -13,7 +13,7 @@
                 "./src/controllers"
             ],
             "@repositories": [
-                "./src/repositories/index.ts"
+                "./src/repositories"
             ],
             "@database": [
                 "./src/database"

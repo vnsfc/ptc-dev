@@ -21,3 +21,33 @@ export const readAllUsers = async (req: Request, res: Response) => {
         })
     }
 }
+
+
+export const createCalcado = async (req: Request, res: Response) => {
+    try {
+            const {nome_produto, cor, marca, tamanho, preco, quantidade_em_estoque} = req.body;
+
+            if (!nome_produto || !cor || !marca || !tamanho || !preco || !quantidade_em_estoque) {
+                return res.status(400).json({
+                    message: "Todos os campos são obrigatórios."
+                })
+            }
+
+            const newCalcado = await prisma.Calcado.create({
+                data: {
+                    nome_produto,
+                    cor,
+                    marca,
+                    tamanho,
+                    preco,
+                    quantidade_em_estoque
+                }
+            });
+        return res.status(201).json(newCalcado);
+    } catch (error) {
+        return res.status(400).json({
+            message: "Erro ao criar calcado",
+            error,
+        })
+    }
+}
