@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "ignoreDeprecations": "6.0",
-    "moduleResolution": "node16",
+    "moduleResolution": "node",
     "target": "es2017",
-    "module": "Node16",
+    "module": "commonjs",
     "lib": [
       "ES2017"
     ],
