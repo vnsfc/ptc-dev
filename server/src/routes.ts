@@ -1,5 +1,6 @@
 import express from "express";
-import {  readAllUsers, createCalcado, deleteCalcado, updateCalcado, readAllCalcados } from "./controllers/UserController";
+import { readAllUsers } from "./controllers/UserController";
+import { createCalcado, deleteCalcado, readAllCalcados, updateCalcado } from "./controllers/CalcadoController";
 
 
 const routes = express.Router();

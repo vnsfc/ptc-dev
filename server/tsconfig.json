@@ -3,7 +3,7 @@
     "ignoreDeprecations": "6.0",
     "moduleResolution": "node16",
     "target": "es2017",
-    "module": "node16",
+    "module": "Node16",
     "lib": [
       "ES2017"
     ],
